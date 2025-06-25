@@ -1,6 +1,3 @@
-
-# Mini_Chatbot
-
 # 🍽️ RAG Culinária Brasileira - Sistema Inteligente de Receitas
 
 Um sistema de chatbot **RAG (Retrieval-Augmented Generation)** super robusto especializado em culinária brasileira, implementado com **TF-IDF**, **Scikit-learn** e **Streamlit**. Sistema garantido para funcionar mesmo sem modelos complexos!
