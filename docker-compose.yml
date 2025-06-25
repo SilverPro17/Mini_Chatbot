@@ -1,0 +1,80 @@
+version: '3.8'
+
+services:
+  # Interface Web Principal
+  rag-culinaria-web:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - rag-network
+
+  # Serviço para desenvolvimento (opcional)
+  rag-culinaria-dev:
+    build: .
+    volumes:
+      - .:/app
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["python", "src/chatbot.py"]
+    stdin_open: true
+    tty: true
+    profiles: ["dev"]
+    networks:
+      - rag-network
+
+  # Jupyter Notebook para desenvolvimento (opcional)
+  rag-culinaria-notebook:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: >
+      sh -c "pip install jupyter matplotlib seaborn scikit-learn &&
+             jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
+    profiles: ["notebook"]
+    networks:
+      - rag-network
+
+networks:
+  rag-network:
+    driver: bridge
+
+volumes:
+  # Volume para persistir dados
+  rag-data:
+    driver: local
+  rag-models:
+    driver: local
+
+# Como usar:
+# 
+# 1. Interface Web (produção):
+#    docker-compose up rag-culinaria-web
+#
+# 2. Desenvolvimento completo:
+#    docker-compose --profile dev up
+#
+# 3. Com Jupyter Notebook:
+#    docker-compose --profile notebook up
+#
+# 4. Todos os serviços:
+#    docker-compose --profile dev --profile notebook up

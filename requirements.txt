@@ -1,0 +1,35 @@
+# Dependências principais para RAG Culinária Brasileira
+
+# LangChain e componentes
+langchain==0.1.0
+langchain-community==0.0.10
+langchain-huggingface==0.0.1
+
+# Modelos e embeddings
+sentence-transformers==2.2.2
+transformers==4.36.0
+torch==2.1.0
+tokenizers==0.15.0
+
+# Vector stores
+faiss-cpu==1.7.4
+
+# Utilitários
+numpy==1.24.3
+pandas==2.0.3
+python-dotenv==1.0.0
+
+# Interface web
+streamlit==1.28.0
+
+# Processamento de arquivos
+pypdf2==3.0.1
+python-docx==0.8.11
+
+# Hugging Face
+huggingface_hub==0.19.0
+accelerate==0.24.0
+
+# Outras dependências úteis
+tqdm==4.66.0
+requests==2.31.0

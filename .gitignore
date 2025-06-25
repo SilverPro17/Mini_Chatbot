@@ -1,0 +1,515 @@
+# RAG Culinária Brasileira - .gitignore
+# Arquivo otimizado para projetos Python + Streamlit + ML
+
+# ===============================================================================
+# PYTHON CORE
+# ===============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ===============================================================================
+# MACHINE LEARNING & DATA SCIENCE
+# ===============================================================================
+
+# Modelos de ML salvos
+*.pkl
+*.pickle
+*.joblib
+*.model
+*.h5
+*.hdf5
+*.pb
+*.onnx
+*.tflite
+
+# Checkpoints
+checkpoint/
+checkpoints/
+*.ckpt
+*.pth
+*.weights
+
+# TensorBoard logs
+runs/
+logs/
+tensorboard/
+
+# Weights & Biases
+wandb/
+
+# MLflow
+mlruns/
+
+# DVC
+.dvc/
+.dvcignore
+
+# ===============================================================================
+# HUGGINGFACE & TRANSFORMERS
+# ===============================================================================
+
+# Modelos baixados do HuggingFace
+models/
+model_cache/
+transformers_cache/
+huggingface_cache/
+
+# Cache específico do projeto
+data/vectorstore/
+data/cache/
+cache/
+
+# Tokenizers
+*.tokenizer
+
+# ===============================================================================
+# STREAMLIT
+# ===============================================================================
+
+# Streamlit cache
+.streamlit/
+streamlit_cache/
+
+# Logs do Streamlit
+streamlit.log
+
+# ===============================================================================
+# DADOS E ARQUIVOS GRANDES
+# ===============================================================================
+
+# Datasets grandes
+*.csv.gz
+*.parquet
+*.h5
+*.hdf5
+data/raw/
+data/processed/
+data/external/
+
+# Arquivos de backup
+*.bak
+*.backup
+*.old
+backup/
+
+# Arquivos temporários do projeto
+temp/
+tmp/
+temporary/
+*.tmp
+
+# ===============================================================================
+# SISTEMA OPERACIONAL
+# ===============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Linux
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+# ===============================================================================
+# IDEs E EDITORES
+# ===============================================================================
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+[._]*.s[a-v][a-z]
+!*.svg  # comment out if you don't need vector files
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+Sessionx.vim
+
+# Temporary
+.netrwhist
+*~
+
+# Auto-generated tag files
+tags
+.tags
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ===============================================================================
+# PROJETO ESPECÍFICO - RAG CULINÁRIA BRASILEIRA
+# ===============================================================================
+
+# Vector stores gerados
+data/vectorstore/
+data/faiss_index/
+*.faiss
+*.index
+
+# Modelos baixados
+models/dialogpt-medium/
+models/sentence-transformers/
+models/huggingface/
+
+# Logs específicos do projeto
+debug.log
+chatbot.log
+vectorstore.log
+rag.log
+
+# Arquivos de configuração com tokens
+.env.local
+.env.production
+config.ini
+secrets.json
+api_keys.txt
+
+# Cache do TF-IDF
+tfidf_cache/
+vectorizer_cache/
+*.tfidf
+
+# Arquivos de teste
+test_outputs/
+test_results/
+benchmark_results/
+
+# Dados sensíveis ou grandes demais
+data/texts_large/
+data/backup/
+receitas_completas/
+ingredientes_completos/
+
+# Embeddings salvos
+embeddings/
+*.npy
+*.npz
+
+# ===============================================================================
+# DOCUMENTAÇÃO E ASSETS
+# ===============================================================================
+
+# Documentação gerada
+docs/_build/
+docs/build/
+site/
+
+# Assets grandes
+assets/videos/
+assets/images/large/
+*.mp4
+*.avi
+*.mov
+
+# ===============================================================================
+# DEPLOYMENT & PRODUÇÃO
+# ===============================================================================
+
+# Docker
+Dockerfile.prod
+docker-compose.prod.yml
+.dockerignore
+
+# Kubernetes
+k8s/
+kubernetes/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Logs de produção
+production.log
+error.log
+access.log
+
+# Configurações de servidor
+nginx.conf
+apache.conf
+gunicorn.conf
+
+# ===============================================================================
+# DESENVOLVIMENTO
+# ===============================================================================
+
+# Arquivos de desenvolvimento
+dev_notes.md
+TODO.md
+ROADMAP.md
+experiments/
+playground/
+scratch/
+
+# Testes locais
+local_test/
+manual_test/
+test_data/
+
+# Benchmarks
+benchmark/
+performance/
+profiling/
+
+# Scripts utilitários
+scripts/dev/
+scripts/test/
+utils/dev/
+
+# ===============================================================================
+# OUTROS
+# ===============================================================================
+
+# Arquivos comprimidos
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+
+# Certificados e chaves
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+
+# Base64 encoded files
+*.b64
+
+# Lock files desnecessários
+poetry.lock
+Pipfile.lock
+yarn.lock
+package-lock.json
+
+# ===============================================================================
+# COMENTÁRIOS ÚTEIS
+# ===============================================================================
+
+# Para INCLUIR arquivos específicos que normalmente seriam ignorados:
+# !caminho/para/arquivo/importante.txt
+
+# Para ignorar tudo numa pasta EXCETO alguns arquivos:
+# pasta/*
+# !pasta/arquivo_importante.txt
+
+# Para ignorar arquivos com padrão específico:
+# **/arquivo_temporario_*
+
+# ===============================================================================
+# FINAL DO ARQUIVO
+# ===============================================================================
