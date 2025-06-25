@@ -6,6 +6,8 @@ Um sistema de chatbot **RAG (Retrieval-Augmented Generation)** super robusto esp
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-red)](https://streamlit.io)
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3%2B-orange)](https://scikit-learn.org)
 
+![oin](https://github.com/user-attachments/assets/d2b7907b-1a89-4827-b9a6-0201b6606c30)
+
 ## 🎯 O que é RAG?
 
 **RAG (Retrieval-Augmented Generation)** é uma técnica que combina:
@@ -152,6 +154,8 @@ def generate_answer(query, results):
 | **📊 Debug** | Logging + Traceback | Sistema de diagnóstico |
 
 ## 📚 Base de Conhecimento Especializada
+
+![nio](https://github.com/user-attachments/assets/126674bc-4536-4a3e-a691-cad744e9344a)
 
 ### 🍽️ Conteúdo Detalhado Incluído:
 
